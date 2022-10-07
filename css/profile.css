@@ -75,7 +75,7 @@ html,body { margin: 0; padding: 0;}
     height: 100vh;
     max-width: 100%;
     overflow: hidden;
-    background-image: url('../images/intro.gif');
+    background-image: url('/images/intro.gif');
 }
 
 
