@@ -1,0 +1,9 @@
+﻿@charset "uft-8";
+body{ overflow-y: scroll; overflow-x: scroll;}
+*{margin:0; padding:0;}
+li{list-style:none;}
+a{text-decoration:none; color:#333333;}
+img{border:none; vertical-align: center;}
+/*Eric Meyer의 reset css 가져다써도 됨  */
+section, article, header, footer, nav, aside, main{display: block;}
+section:after, article:after, header:after, footer:after, nav:after, aside:after, main:after, ul:after, .clearFix{content:""; display: block; clear: both;}

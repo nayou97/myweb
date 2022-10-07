@@ -1,0 +1,599 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0; box-sizing: border-box;}
+ul{list-style: none;}
+a{text-decoration: none; color: #333; cursor: pointer;}
+body{font-family: 'NanumSquareRound';}
+/* 출처: https://webkimsora.tistory.com/61 [코딩 공부하는 소라:티스토리] 
+html{cursor: url(cursor.png), auto}
+*/
+
+
+html, body{overflow: hidden;} /* 화면 전체적으로 스크롤을 내리면, 반응형 효과가 나타남 */
+
+
+
+
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Hahmlet-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/Hahmlet-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+
+
+
+
+.about2 > h3 > i{text-decoration-line:underline;text-decoration-style:wavy;text-decoration-color:#561edba1;}
+
+
+
+
+/* 프로필 */
+.about{
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+
+.about .about-wrap{ /* 프로필 회색 배경 */
+    width: 1100px;
+    height: 80%;
+    border-style: dashed;
+    border-radius: 50px;
+    margin-left: 14%;
+    margin-top: 4%;
+}
+
+
+
+.about h1{
+    font-size: 50px;    
+    padding: 30px 0;
+    text-align: center;
+}
+.about .left{
+    width: 380px;
+    height: 809px;
+    float: left;
+    border-right: 1px solid rgb(218, 218, 218);
+}  
+/* 사진 크기 */
+.about .left img{
+    width:300px;
+    height: 300px;
+    position: relative;
+    top: 20%;
+    border-radius: 50%;
+    right: -25%;
+    float: left;
+}
+
+
+
+
+
+.about .left .keyword{
+    width: 320px;
+    height: 40px;
+    position: relative;
+    left: 200px;
+    top: 450px; /* 높이 - 위치 */
+    background-color: #c3daf6;
+    border-radius: 20px;
+}
+.about .left .keyword ul{
+    width: 100%;
+    height: 100%;
+    line-height: 35px;
+}
+.about .left .keyword ul li{
+    height: 20px;
+    float: left;
+    position: absolute;
+    top: 4px;
+    padding: 0px 30px;
+    transition: all 0.8s;
+}
+.about .left .keyword ul li p{
+    font-weight: bold;
+    font-size: 18px;
+}
+.about .left .keyword h4{
+    position: absolute;
+    left: -120px;
+    top: 7px;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+.about .right{
+    float: left;
+    width: 600px;
+    height: 809px;
+    margin-left: 20px;
+}
+.about .right h3{
+    padding-top: 40px;
+    padding-left: 40px;
+    font-style: normal | italic | oblique | initial | inherit;
+}
+
+
+
+
+
+
+.about .right ul{
+    padding-left: 40px;
+    margin-top: 20px;
+}
+.about .right ul li{
+    font-size: 14px;
+}
+
+
+.about .right .introduce ul li p{
+    text-align: center;
+    right: 30px;
+    position: relative;
+}
+
+ 
+
+
+
+
+
+.about .right .skill ul li{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: #c3daf6;
+    float: left;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+
+
+.about .right .skill ul li:nth-child(1)::after,
+.about .right .skill ul li:nth-child(2)::after,
+.about .right .skill ul li:nth-child(3)::after,
+.about .right .skill ul li:nth-child(4)::after,
+.about .right .skill ul li:nth-child(5)::after{
+    background-color: #fff;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+    cursor: none;
+}
+
+
+
+
+.about .right .skill ul li:nth-child(1):hover::after{
+    height: 90%;
+    content: "90%";
+    line-height: 80px;
+}
+.about .right .skill ul li:nth-child(2):hover::after{
+    height: 90%;
+    content: "90%";
+    line-height: 80px;
+}
+.about .right .skill ul li:nth-child(3):hover::after{
+    height:90%;
+    content: "90%";
+    line-height: 80px;
+}
+.about .right .skill ul li:nth-child(4):hover::after{
+    height: 80%;
+    content: "80%";
+    line-height: 65px;
+}
+.about .right .skill ul li:nth-child(5):hover::after{
+    height: 75%;
+    content: "70%";
+    line-height: 55px;
+}
+
+
+
+
+
+/* about 
+.about{background: url("../img/svg/about_back.svg") no-repeat 25% 120% / 204% 60%,#fff;padding-top:80px;}
+*/
+
+.about1{
+  width:35%;height:60%;float:left;
+  position:relative;
+  box-sizing:border-box;
+}
+.about2{
+  width:35%;height:60%;float:left;
+  font-family: 'BMJUA';
+  padding-left:70px;
+  box-sizing:border-box;
+}
+.about3{
+  box-sizing:border-box;
+  border-left: 1px solid #e2e2e3;
+  padding-left: 2%;
+  width: 25%;
+  height:55%;
+  float: left;
+  margin: 0 2% 0 3%;
+  font-family: 'BMJUA';
+  color: #565656;
+  position: relative;
+}
+.about4{box-sizing:border-box;
+  width:100%;
+  float:left;
+  padding-left:6%;
+  font-size:15px;
+  color:#565656;
+  font-family:'BMJUA';
+  line-height:25px;
+}
+
+
+.about:after{content:"";display:block;clear:both;}
+
+.about3:after{
+  content:"";
+  display:block;
+  width:5px;
+  height:25px;
+  background:#493DC1;
+  position:absolute;
+  left:-0.8%;
+  top:106px;
+}
+.about3:before{
+  content:"";
+  display:block;
+  width:5px;
+  height:25px;
+  background:#493DC1;
+  position:absolute;
+  left:-0.8%;
+  top:349px;
+}
+
+
+.about_img > h2{
+  font-size: 11vh;
+  font-family: 'Corinthia', cursive;
+  font-weight: bold;
+  color: rgb(122 73 241 / 87%);
+  position: absolute;
+  left:-14%;
+  top:-16%;
+  transform: rotate(-12.5deg);
+}
+.about_img{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 300px;
+  height: 400px;
+  margin-top: 200px;
+  margin-left: 150%;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+}
+.about_img > img{width:100%;height:100%;object-fit:cover;border-radius:50%;position:absolute;left:0;top:0;z-index:30;}
+
+
+
+
+/* about animation */
+.wave-one {
+  position: absolute;
+  left: -10%;
+  top: 0%;
+  width: 118.5%;
+  height: 98.6%;
+  border-radius: 183px 169px 258px 189px;
+  background: rgb(101 78 197 / 38%);
+  animation: move 3s infinite linear;
+  z-index: 5;
+}
+.wave-two {
+  position: absolute;
+  left: -5%;
+  top: 0%;
+  width: 116.6%;
+  height: 95.8%;
+  border-radius: 188px 170px 270px 190px;
+  background: #654ec54f;
+  animation: move 5s infinite linear;
+  z-index: 4;
+}
+@keyframes move {
+  100%{transform: rotate(360deg);}
+}
+
+.about2 > h3{
+  font-size:40px;
+  font-weight: 100;
+  font-family: 'Binggrae-Two';
+  margin-top: 110px;
+  margin-bottom: 40px;
+  color:#262626;
+}
+.about2 > h3 > i{text-decoration-line:underline;text-decoration-style:wavy;text-decoration-color:#561edba1;}
+.about2 > p{
+  color:#262626;
+  font-size:1rem;
+  line-height: 25px;
+  margin-left: 5px;
+  font-family: 'NanumSquareRound';
+}
+.about3 ul li:first-of-type{
+  color: #8f60fb;
+  font-size:22px;
+  font-weight:bold;
+  line-height:40px;
+  font-family: 'Architects Daughter', cursive;
+}
+.about3_top{margin-top:100px;}
+.about3_mi{margin-top:150px;}
+.about3_top > li{font-size:0.9em;line-height: 26px;}
+.about3_mi > li{font-size:15px;line-height: 26px;}
+
+
+
+
+
+
+
+/* 그래프 변경 = 갯수 설정은 js로 가자 */
+.pie-chart {
+  position: relative;
+  display:inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+span.center{
+  background: #999;
+  display : block;
+  position: absolute;
+  top:50%; left:50%; /* 가운데 하얀 원(숫자적힌)이 얼마나 중심에서 벗어나냐 */
+  width:50px; height:50px; /* 중심축 중심으로 원의 지름...위에 Pid-chart에 있는 width와 height를 같이 수정해가며 모양조절해야함 */
+  border-radius: 50%; /* 원의 동글둥글한 수준을 나타냄 */
+  text-align:center; 
+  line-height: 50px; /* 숫자 적을수록 텍스트가 위로 올라감 */
+  font-size:15px;
+   transform: translate(-50%, -50%); /* 중심 원이 숫자가 작을수록 오른쪽으로, 아래로 이동함 */
+}
+
+
+
+
+
+@media screen and (max-width: 640px){
+
+
+
+    /* about 프로필*/
+    .about .about-wrap{
+        width:98%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    .about .left{
+        float: none;
+        width: 100%;
+        height: 200px;
+        background-color: #333;
+        border-right: 0;
+        border-radius: 30px 30px 0 0;
+    }
+    .about h1{
+        font-size: 30px;
+    }
+    .about .left .me{
+        position: relative;
+        top: -80px;
+        color: #fff;
+        font-size: 12px;
+    }
+    .about .left img{
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%,0%);
+        width: 180px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+
+
+    .about .left .keyword{
+        width: 250px;
+        height: 30px;
+        left: 100px;
+        top: 290px;
+    }
+    .about .left .keyword ul li{
+        top: 0;
+    }
+    .about .left .keyword ul li p{
+        font-size: 12px;
+    }
+    .about .left .keyword h4{
+        font-size: 14px;
+        left: -80px;
+    }
+
+
+
+
+
+
+
+    .about .right{
+        width: 100%;
+        float: none;
+        height: 500px;
+        margin-top: 200px;
+    }
+    .about .right h3{
+        padding: 0;
+        font-size: 14px;
+    }
+    .about .right .profile p{
+        font-size: 14px;
+    }
+    .about .right .experiences{
+        margin:0px;
+    }
+    .about .right ul{
+        margin-top: 10px;
+    }
+    .about .right ul li{
+        font-size: 12px;
+    }
+    .about .right .profile > p{
+        right: -40px;
+        font-size: 14px;
+    }
+    .about .right .introduce ul li p{
+        margin-left: -30px;
+        font-size: 10px;
+    }
+
+
+
+    .about .right .experiences h3{
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    .about .right .experiences ul{
+        padding: 0;
+    }
+    .about .right .experiences ul li p{
+        font-size: 10px;
+    }
+    .about .right .experiences ul li span{
+        margin-left: 10px;
+        font-size: 10px;
+    }
+
+
+    .about .right ul li:nth-child(2) span{
+        margin-left: -10px;
+    }
+
+
+ }
+
+
+
+
+@media screen and (min-width: 640px) and (max-width: 1024px){
+
+
+    .home .home-wrap > p{
+        font-size: 3vw;
+        left: 50.5%;
+    }
+
+    .about .about-wrap{
+        width: 98%;
+        overflow: hidden;
+    }
+    .about .left{
+        width: 40%;
+        background-color: rgba(3,3,3,0.7);
+        border-bottom: 1px solid #000;
+        position: relative;
+    }
+    .about .left .me{
+        padding-top: 0px;
+        top: 30px;
+        color: #fff;
+        position: relative;
+    }
+    .about .left img{
+        width: 170px;
+        transform: translate(-5.5%,15%);
+    }
+    .about .left .keyword{
+        left: 0%;
+        top: 65%;
+        width: 100%;
+    }
+    .about .left .keyword h4{
+        color: #fff;
+        left: 35%;
+        top:-70px;
+    }
+    .about .left .keyword ul li p{
+        font-size: 14px;
+    }
+    .about .right{
+        float: left;
+        width: 57.5%;
+        height: 100%;
+    }
+    .about .right{
+        margin-left: 0;
+    }
+    .about .right h3{
+        padding-left: 10px;
+    }
+    .about .right ul{
+        padding-left: 10px;
+    }
+
+
+    .about .right .skill ul li{
+        margin-right: 0px;
+        width: 10px;
+        height: 10px;
+        line-height: 10px;
+    }
+
+
+
+    .about .right ul{
+        margin-bottom: 25px;
+    }
+
+
+
+

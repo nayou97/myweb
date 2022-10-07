@@ -1,0 +1,423 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0; box-sizing: border-box;}
+ul{list-style: none;}
+a{text-decoration: none; color: #333; cursor: pointer;}
+body{font-family: 'NanumSquareRound';}
+/* 출처: https://webkimsora.tistory.com/61 [코딩 공부하는 소라:티스토리] 
+html{cursor: url(cursor.png), auto}
+*/
+
+/* 
+html, body{overflow: hidden;} 화면 전체적으로 스크롤을 내리면, 반응형 효과가 나타남 */
+
+html,body { margin: 0; padding: 0;}
+
+#wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+#wrap .page {
+                scroll-snap-align: center;
+                display: inline-block;
+                width: 100%;
+                height: 100%; /* 전체화면에 비치는 크기 *//* 전체화면 레이아웃에서 Padding 넣었기 때문에 컨텐츠들이 너무 아래로 내려갔던것 ;; */
+                font-size: 20px; 
+                text-align: center;
+                box-sizing: border-box;
+                color: #fff;
+            }
+
+
+/* skills Images flex */
+.flex-container{display: flex;}
+.flex-item{
+  width: 100px;
+  height: 100px;
+  margin: 10px; 
+ }
+
+
+
+
+
+
+/* font setting */
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Hahmlet-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/Hahmlet-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+
+
+
+
+.introduce > h3 > i{text-decoration-line:underline;text-decoration-style:wavy;text-decoration-color:#561edba1; background-color:#00FEFE}
+
+
+
+
+/* 프로필 */
+.aboutme{
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+    background-image: url('../images/intro.gif');
+}
+
+
+
+.aboutme .about-wrap{ /* 프로필 회색 배경 */
+    width: 1100px;
+    height: 80%;
+    border-style: dashed;
+    margin-left: 14%;
+    margin-top: 4%;
+
+/* 유리질감 표현 */
+background: rgba( 255, 255, 255, 0.05 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 5px );
+-webkit-backdrop-filter: blur( 5px );
+border-radius: 50px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+
+
+.aboutme h1{
+    font-size: 50px;    
+    padding: 30px 0;
+    text-align: center;
+}
+.aboutme .left{
+    width: 380px;
+    height: 809px;
+    float: left;
+    border-right: 1px solid rgb(218, 218, 218);
+}  
+/* 사진 크기 */
+.aboutme .left img{
+    width:300px;
+    height: 300px;
+    position: relative;
+    top: 20%;
+    border-radius: 10%;
+    right: -25%;
+    float: left;
+}
+
+
+
+
+
+
+
+
+.aboutme .right{
+    float: left;
+    width: 600px;
+    height: 809px;
+    margin-left: 20px;
+}
+.aboutme .right h3{
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+
+
+
+
+
+.aboutme .right ul{
+    padding-left: 40px;
+    margin-top: 20px;
+}
+.aboutme .right ul li{
+    font-size: 14px;
+}
+
+
+.aboutme .right .introduce ul li p{
+    text-align: center;
+    right: 30px;
+    position: relative;
+}
+
+ 
+
+
+
+.aboutpic{
+  width:35%;height:60%;float:left;
+  position:relative;
+  box-sizing:border-box;
+}
+
+
+
+.aboutme:after{content:"";display:block;clear:both;}
+
+/* prifile text setting */
+.about_img > h2{
+  font-size: 15vh;
+  font-family: 'Corinthia', cursive;
+  font-weight: bold;
+  color: rgb(122 73 241 / 87%);
+  position: absolute;
+  left:-14%;
+  top:-30%;
+  transform: rotate(-12.5deg);
+}
+.about_img{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 300px;
+  height: 400px;
+  margin-top: 300px;
+  margin-left: 150%;
+  border-radius: 10%;
+  transform: translate(-50%,-50%);
+}
+.about_img > img{width:100%;height:100%;object-fit:cover;border-radius:10%;position:absolute;left:0;top:0;z-index:30;}
+
+
+
+
+/* about animation */
+.wave-one {
+  position: absolute;
+  left: -10%;
+  top: 0%;
+  width: 118.5%;
+  height: 98.6%;
+  border-radius: 183px 169px 258px 189px;
+  background: rgb(101 78 197 / 38%);
+  animation: move 3s infinite linear;
+  z-index: 5;
+}
+.wave-two {
+  position: absolute;
+  left: -5%;
+  top: 0%;
+  width: 116.6%;
+  height: 95.8%;
+  border-radius: 188px 170px 270px 190px;
+  background: #654ec54f;
+  animation: move 5s infinite linear;
+  z-index: 4;
+}
+@keyframes move {
+  100%{transform: rotate(360deg);}
+}
+
+
+
+
+
+
+
+
+ 
+/* 그래프 나열 <div class="skillBar"> */
+.skill > div div {
+    float: left;
+    margin-top: 8px;
+}
+
+
+
+.skillBar {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0%;
+    height: 45%;
+    /*float: left;*/
+}
+
+.skillBar div {
+    margin-top: 0;
+    width: 25%;
+    height: 40px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.skillBar div p {
+    position: relative;
+    width: 25%;
+    height: 15px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: left;
+}
+
+.skillBar div b {
+    height: 15px;
+    width: 40%;
+    font-size: 12px;
+    display: inline-block;
+    font-weight: normal;
+
+}
+
+.skillBar p span {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border: 1px solid #333;
+}
+
+.skillBar p span:last-child {
+    border: none;
+    background-color: #333;
+    width: 0%;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 640px){
+
+
+
+    /* about 프로필*/
+    .aboutme .about-wrap{
+        width:98%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    .aboutme .left{
+        float: none;
+        width: 100%;
+        height: 200px;
+        background-color: #333;
+        border-right: 0;
+        border-radius: 30px 30px 0 0;
+    }
+    .aboutme h1{
+        font-size: 30px;
+    }
+    .aboutme .left img{
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%,0%);
+        width: 180px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+
+
+
+
+
+
+
+    .aboutme .right{
+        width: 100%;
+        float: none;
+        height: 500px;
+        margin-top: 200px;
+    }
+    .aboutme .right h3{
+        padding: 0;
+        font-size: 14px;
+    }
+    .aboutme .right .profile p{
+        font-size: 14px;
+    }
+    .aboutme .right .experiences{
+        margin:0px;
+    }
+    .aboutme .right ul{
+        margin-top: 10px;
+    }
+    .aboutme .right ul li{
+        font-size: 12px;
+    }
+    .aboutme .right .profile > p{
+        right: -40px;
+        font-size: 14px;
+    }
+    .aboutme .right .introduce ul li p{
+        margin-left: -30px;
+        font-size: 10px;
+    }
+
+
+ 
+    .aboutme .right .experiences ul{
+        padding: 0;
+    }
+    .aboutme .right .experiences span{
+        margin-left: 10px;
+        font-size: 10px;
+    }
+
+
+
+}
+
+
+
+
+@media screen and (min-width: 640px) and (max-width: 1024px){
+ 
+
+    .aboutme .about-wrap{
+        width: 98%;
+        overflow: hidden;
+    }
+    .aboutme .left{
+        width: 40%;
+        background-color: rgba(3,3,3,0.7);
+        border-bottom: 1px solid #000;
+        position: relative;
+    }
+    .aboutme .left img{
+        width: 170px;
+        transform: translate(-5.5%,15%);
+    }
+
+
+    .aboutme .right{
+        float: left;
+        width: 57.5%;
+        height: 100%;
+        margin-left: 0;
+    }
+    .aboutme .right h3{
+        padding-left: 10px;
+    }
+    .aboutme .right ul{
+        padding-left: 10px;
+        margin-bottom: 25px;
+    }
+
+}
+
+

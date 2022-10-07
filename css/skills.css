@@ -1,0 +1,19 @@
+.full{ 
+    display:flex;
+}
+.second {
+    position:relative;
+    width:100px;
+    height:100px;
+    margin-left:50px;
+}
+.second>canvas{
+    width:30%;
+}
+.second > strong {
+    position:absolute; 
+    top:50%; 
+    left:50%; 
+    transform:translatex(-50%) translatey(-50%);
+    font-size:2rem;
+}

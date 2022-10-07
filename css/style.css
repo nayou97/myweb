@@ -1,0 +1,496 @@
+@charset "utf-8";
+
+/*  FONT */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.5px;
+    box-sizing: border-box;
+}
+
+button,
+input {
+    border-radius: 0;
+    border: 0;
+    background: none;
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+address,
+em {
+    font-style: normal
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+iframe {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* SETTING */
+
+body {
+    height: 100vh; 
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: url(../images/rainbow.png), auto;
+}
+
+
+
+
+.page {
+                scroll-snap-align: center;
+                display: inline-block;
+                width: 100%;
+                height: 100%; /* 전체화면에 비치는 크기 *//* 전체화면 레이아웃에서 Padding 넣었기 때문에 컨텐츠들이 너무 아래로 내려갔던것 ;; */
+                font-size: 20px; 
+                text-align: center;
+                box-sizing: border-box;
+                color: #fff;
+            }
+
+
+
+
+/* Design part */
+  #design h1{
+        padding-top: 30px;
+    }
+    #design h5{
+        padding-top: 30px;
+         text-align: center;
+    }
+    .designpart {
+        padding-left:300px;
+        padding-right: 300px;
+    }
+
+    .designlist { 
+        margin-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .designlist div a img{
+    cursor: url('../images/rainbow-drag.png'), auto;
+        height: 200px; width: 200px; margin-right: 200px;
+    }
+
+    #design > h5 > i{text-decoration-line:underline; text-decoration-style:wavy; text-decoration-color:#561edba1;}
+
+
+
+
+#design{
+
+    height: 100vh;
+    background-image: url('../images/webapp-background.jpg');
+}
+
+
+
+
+
+section {
+    /* padding: 7.7vh 0; */
+}
+
+#intro,
+#about,
+#epilogue {
+    height: 100vh;
+
+}
+
+.inner {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 3rem;
+    color: #112152;
+    text-align: center;
+    font-family: 'point';
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+
+
+
+
+
+/* CUSTOM */
+body {
+    overflow: overlay;
+}
+
+::selection {
+    background-color: #112152;
+    color: #FFCC00;
+}
+
+h1::selection {
+    background-color: #FFCC00;
+    color: #112152;
+}
+
+img {
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #F4AA08;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+
+
+/* LOADING */
+
+
+
+
+
+
+
+
+nav {
+    cursor: url('../images/rainbow-drag.png'), auto;
+    z-index: 99;
+    position: fixed;
+    top: 50%;
+    right: 40px;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    display: block;
+}
+
+nav ul {
+    cursor: url('../images/rainbow-drag.png'), auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+}
+
+nav li {
+    cursor: url('../images/rainbow-drag.png'), auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #112152;
+    transition: .35s ease-in-out;
+    cursor: pointer;
+}
+
+nav li.on {
+    cursor: url('../images/rainbow-drag.png'), auto;
+    height: 18px;
+    width: 18px;
+    background-color: #F4AA08;
+}
+
+nav li.on span { 
+    cursor: url('../images/rainbow-drag.png'), auto;
+    color: #F4AA08;
+}
+
+nav li a {
+    cursor: url('../images/rainbow-drag.png'), auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: .35s ease-in-out;
+}
+
+nav li span{
+    cursor: url('../images/rainbow-drag.png'), auto;
+    display: block;
+    color: #112152;
+    margin-left: -120px;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: right;
+    font-weight: 600;
+    transition: .35s ease-in-out;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+
+
+.scroll_txt {
+    cursor: url('../images/rainbow-drag.png'), auto;
+    position: absolute;
+    top: 86vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.scroll_down {
+    width: 0.156rem;
+    height: 5rem;
+    background: #fff;
+    animation: scrollDown 2s ease infinite;
+    position: absolute;
+    left: 50%;
+    top: 88vh;
+}
+
+@keyframes moveT {
+    0% {
+        transform: scale(0) translate(-50%, -50%);
+    }
+    
+    33% {
+        transform: scale(0) translate(-50%, -50%);
+    }
+
+    44%{
+        transform: scale(1.2) translate(-50%, -50%);
+    }
+    
+    50%{
+        transform: scale(1) translate(-50%, -50%);
+    }
+
+
+    100% {
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: rotate(-150deg);
+        top: -10%;
+        left: -10%;
+    }
+
+    33% {
+        transform: rotate(-150deg);
+        transform-origin: center;
+        top: 25%;
+        left: 25%;
+    }
+
+    55% {
+        transform: rotate(-150deg);
+        transform-origin: center;
+        top: 23%;
+        left: 23%;
+    }
+
+    100% {
+        transform-origin: center;
+        transform: rotate(-150deg);
+        top: 100%;
+        left: 100%;
+    }
+}
+
+@keyframes rolling {
+    0% {
+        transform: translate(-50%, -50%) scaleX(1);
+    }
+
+    17% {
+        transform: translate(-50%, -50%) scaleX(0.8);
+    }
+
+    33% {
+        transform: translate(-50%, -50%) scaleX(1);
+    }
+
+    66% {
+        transform: translate(-50%, -50%) scaleX(1);
+    }
+
+    86% {
+        transform: translate(-50%, -50%) scaleX(0.8);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scaleX(1);
+    }
+}
+
+@keyframes scrollDown {
+    0% {
+        transform-origin: top;
+        transform: translateX(-50%) scaleY(0);
+    }
+
+    45% {
+        transform-origin: top;
+        transform: translateX(-50%) scaleY(1);
+    }
+
+    55% {
+        transform-origin: bottom;
+        transform: translateX(-50%) scaleY(1);
+    }
+
+    100% {
+        transform-origin: bottom;
+        transform: translateX(-50%) scaleY(0);
+    }
+}
+
+
+
+
+
+/* intro */
+#intro{
+    background-image: url('../images/main-view.gif');
+}
+
+
+
+
+
+
+
+/* PORTFOLIO */
+#portfolio {
+    background-image: url('../images/webapp-background.jpg');
+    height: 100vh;
+
+}
+
+#portfolio .btn {
+    background-color: #999; 
+}
+
+#portfolio .cntWrap .content .article .menu{
+    padding-top: 50px;
+}
+
+
+
+
+
+
+/* EPILOGUE */
+#epilogue {
+    position: relative;
+    height: 250px;
+    text-align: center;
+    background-color: black;
+    padding-top: 30px;
+}
+
+#epilogue .inner {
+    margin-bottom: 10px;
+}
+
+#epilogue .inner h5{
+    font-size : 20px;
+    color : white;
+}
+#epilogue .inner span{
+    font-size : 13px;
+    color : white;
+}
+
+
+
+
+
+
+
+/* hover effect */
+/* nav TExt effect setting */
+@media screen and (min-width: 1367px) {
+    nav li:hover {
+        height: 18px;
+        width: 18px;
+    }
+    
+    nav li:hover span{
+        width: 110px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /*
+    span[class^="thumbnail"]:hover::after{
+        visibility: visible;
+        opacity: 1;
+    }
+*/
+    .btn:hover {
+        background-color: #F4AA08;
+        border: 3px solid transparent;
+        color: #112152;
+    }
+
+    .slick-prev:hover{
+        background-image: url('../images/arrow-left.png');
+    }
+    
+    .slick-next:hover{
+        background-image: url('../images/arrow-left.png');
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
